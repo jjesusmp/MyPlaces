@@ -49,18 +49,4 @@ public class AppExecutors {
         }
     }
 
-    private class DiskIOThreadExecutor implements Executor {
-
-        private final Executor mDiskIO;
-
-        public DiskIOThreadExecutor() {
-            mDiskIO = Executors.newSingleThreadExecutor();
-        }
-
-        @Override
-        public void execute(@NonNull Runnable command) {
-            mDiskIO.execute(command);
-        }
-    }
-
 }
